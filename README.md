@@ -1,2 +1,2 @@
-# Flashcard
-Flashcard - Master the english language
+# Contactbook
+Contactbook - Add and save contacts
