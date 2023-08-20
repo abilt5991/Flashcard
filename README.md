@@ -31,6 +31,8 @@ This is a simple Dynamic page, that takes 2 input text for a meme image. When "G
 This is a dynamic page, where we can Create our Shopping List with "addItem" and "deleteItem" functions. 
 It handles error, by checking for "Empty and Duplicate" values when we try to add an item to the list.
 
+This project showcases how React enables the creation of dynamic interfaces with efficient state management and rendering.
+
 1. React Hook useState() - For storing all items of the sopphing list component, "Additem". ["itemVal" and "allItems" are two useState hooks]
 
 2. Maps - For Rendering js for each item in the shopping list array, "allItems"
