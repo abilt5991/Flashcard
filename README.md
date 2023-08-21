@@ -13,9 +13,9 @@ In this static page, I have used impleted the following concepts of React js
 
 # **2. Meme Generator**
 
-This is a simple Dynamic page, that takes 2 input text for a meme image. When "Get a new image" button is clicked, it renders a new image witha fetch api call.
+This is an interactive application for generating memes, that takes 2 input text for a meme image. When "Get a new image" button is clicked, it renders a new image witha fetch api call.
 
-1. React Hook useState() - For remembering values of the component. ["setMeme" and "setAllMemes" are two useState hooks]
+1. React Hook useState() - [Handling sideeffects]. Forremembering values of the component. ["setMeme" and "setAllMemes" are two useState hooks]
 
 2. React Hook useEffect() - For making a fetch call and handling promises. Have updated the "allMemes" state object with the response data. There's no need for dependencies here. So, the second parameter of this hook is left empty. Also, no clean up as the fetch call is made on load and there is no "Memory leak" that's handled with a cleanup function.
 
