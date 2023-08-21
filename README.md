@@ -3,9 +3,10 @@
 
 In this static page, I have used impleted the following concepts of React js
 
-1. Components - For creating cards of each place travelled
+1. Custom Components - For creating cards of each place travelled
 2. Maps - Rendering jsx for each place object 
 3. Conditional Rendering - Adding Favourites from the list
+4. Styling
 
 <img width="532" alt="traveljournal1" src="https://github.com/abilt5991/ReactJSCode/assets/125937034/2803719c-3725-4ec3-873a-92f644e4aaf7">
 
