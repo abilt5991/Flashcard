@@ -49,3 +49,30 @@ This project showcases how React enables the creation of dynamic interfaces with
 <img width="825" alt="shoppinglist3" src="https://github.com/abilt5991/ReactJSCode/assets/125937034/1e034596-69e6-48c7-b844-f567f64ab7cc">
 
 
+# **4. TenZies Game App**
+
+This is an interactive online game called 'TenZies' where you roll the dice with an active timer and a roll count. Each time you roll you can click on certain boxes to hold it from next roll. Once you've rolled all the boxes to a same number you complete the game. You can reset or start a new game at any given point.
+
+1. Stopwatch - created a 'Timer' component to implement the stopwatch using the following react components
+   - useState() hook - For setting timer value
+   - useEffect() hook - setInterval and clearInterval functions for running the stopwatch
+   - useRef() hook - For resetting the timer count to 0 in the stopwatch
+
+2. Rollcount - created to keep track of the number of rolls made to win with the use of useState() hook
+
+3. Dice - created to display the TenZies dice 
+   - map() array function - To clone and display 10 dice in the app and display random values on them
+   - Used "conditional styling" to style a dice based on the player's click when it is held
+
+4.  Rolling Dice - Used "ID" of Dice within a map() to hold the Dice from rolling based on selection, so that when the player rolls again 
+    only the unheld Dice are updated to the next set of random values while the rest stays the same
+
+5. Confetti - used the React component to display when the player wins the TenZies once all the Dice are matched (used CDN link instead of 
+   npm)
+
+6. Reset and New Game - player can start a new game after finishing or reset to a new game at any point in time (which resets all the react 
+   states in the app)
+
+
+![TenziesWin](https://github.com/abilt5991/ReactJSCode/assets/125937034/9ba1b251-2fa4-49c4-bbcd-b45d984f759d)
+

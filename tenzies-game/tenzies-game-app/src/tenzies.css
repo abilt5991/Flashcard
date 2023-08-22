@@ -1,0 +1,109 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0B2434;
+    padding: 20px;
+}
+
+main {
+    max-width: 800px;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    height: 50vh;
+    justify-content: center;
+    margin: 80px auto;
+    background: #F5F5F5;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+
+.die--face {
+    height: 50px;
+    width: 50px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background: white;
+    cursor: pointer;
+}
+
+.die--val {
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.title {
+    font-size: 40px;
+    margin: 0;
+}
+
+.instructions {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: center;
+    width: 70%;
+}
+
+.bg--box {
+    display: grid;
+    grid-template: auto auto / repeat(5, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    padding: 16px 40px;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+     cursor: pointer;
+}
+
+.roll--btn {
+    background-color: #5035FF;
+    color: white;
+}
+
+.reset--btn {
+    background: none;
+    border: none;
+    display: block;
+    color: #ffa200;
+    margin: 0 auto;
+    font-weight: 300;
+    padding: 0;
+}
+
+.roll--btn:focus {
+    outline: none;
+}
+
+.roll--btn:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.top--info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info--data {
+    color: white;
+}
+.info--title {
+    font-weight: 200;
+    color: #ffa200;
+}
