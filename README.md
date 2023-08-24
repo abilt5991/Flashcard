@@ -46,7 +46,8 @@ This project showcases how React enables the creation of dynamic interfaces with
 
 6. some() - For conditional checking on duplicate values and alerts with a message.
 
-<img width="825" alt="shoppinglist3" src="https://github.com/abilt5991/ReactJSCode/assets/125937034/1e034596-69e6-48c7-b844-f567f64ab7cc">
+<img width="440" alt="Screenshot 2023-08-24 at 4 34 58 pm" src="https://github.com/abilt5991/ReactJSCode/assets/125937034/36c09957-cd01-498b-8d9b-d7006c63a88f">
+
 
 
 # **4. TenZies Game App**

@@ -1,19 +1,19 @@
-
 function App() {
-    
     const [allDice, setAllDice] = React.useState(intialVal())
     const [tenzies, setTenzies] = React.useState(false)
     const [rollCount, setRollCount] = React.useState(0)
     const [startWatch, setStartWatch] = React.useState(false)
     
     const diceBlocks = allDice.map((item) => {
-        return   <Dice key={item.id} isHeld={item.isHeld} holdMeFunc={()=>holdMe(item.id)} value={item.value}/>
+        return <Dice key={item.id} isHeld={item.isHeld} holdMeFunc={()=>holdMe(item.id)} value={item.value}/>
     })
     
     function holdMe(id) {
-        setAllDice(preVal => preVal.map((item) => {
+        if(startWatch) {
+            setAllDice(preVal => preVal.map((item) => {
             return item.id === id ? {...item, isHeld: !item.isHeld} : item
         }))
+        }
     }
         
     React.useEffect(()=>{        
@@ -65,11 +65,11 @@ function App() {
             setTenzies(false)
             callbackRef.current()
             setStartWatch(true)
-            setRollCount(val => 0)
+            setRollCount(val => 1)
         } else {
             setStartWatch(true)
             setAllDice(preVal => preVal.map( item => {
-            return item.isHeld ? item : newDice(item.id)
+                return item.isHeld ? item : newDice(item.id)
             }))
             setRollCount(val => val+1)
         }
@@ -81,10 +81,10 @@ function App() {
         setRollCount(0)
         setStartWatch(false)
         callbackRef.current()
-                    
     }
         
-    const callbackRef = React.useRef()
+    const callbackRef = React.useRef(null)
+  
     function resetWatchTrigger(resetCallback)
     {
         callbackRef.current = resetCallback
@@ -92,10 +92,10 @@ function App() {
         
     return (
         <div>
-            <div className="top--info">
+            <section className="top--info">
                 <Timer runningWatch={startWatch} resetWatchTrigger={resetWatchTrigger}> </Timer>
                 <Rolls rollCount={rollCount}> </Rolls>
-            </div>
+            </section>
         
             <main>
                 <h1 className="title">Tenzies</h1>
@@ -106,7 +106,7 @@ function App() {
                 
                 <button className="btn roll--btn" value="Roll" onClick={rollDice}>{tenzies ? "New Game" : "Roll"}</button>
             </main>
-                <button className="btn reset--btn" value="Reset" onClick={resetGame}>Reset Game</button>
+            <button className="btn reset--btn" value="Reset" onClick={resetGame}>Reset Game</button>
         </div>
     )  
 }

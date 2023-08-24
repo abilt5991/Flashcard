@@ -1,20 +1,18 @@
-
 function Timer(props) {
   const [time, setTime] = React.useState(0)  
-    
   function reset() {
         setTime(0)
-    }
+  }
     
   props.resetWatchTrigger(reset)
-
   React.useEffect(() => {
     let intervalId;
     if (props.runningWatch) {
-      intervalId = setInterval(() => setTime(time + 1), 10)
+      intervalId = setInterval(() => setTime(preVal => preVal + 1), 10) //To keep the timer running
     }
-    return () => clearInterval(intervalId)
-  }, [props.runningWatch,  time])
+    return () => clearInterval(intervalId) //Memory Leaks
+      
+  }, [props.runningWatch])
 
   const hours = Math.floor(time / 360000);
   const minutes = Math.floor((time % 360000) / 6000);
@@ -25,4 +23,3 @@ function Timer(props) {
       </h2>
   );
 };
-
